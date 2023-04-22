@@ -18,7 +18,7 @@ int main(void)
 				putchar(j);
 				if (i == '8' && j == '9')
 				{
-					break;
+					putchar('\n');
 				}
 				else
 				{
@@ -31,6 +31,5 @@ int main(void)
 		j = '0';
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }
