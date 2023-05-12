@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 3 || argc > 3)
 	{
-		printf("error\n");
+		printf("Error\n");
 		return (1);
 	}
 	num1 = _atoi(argv[1]);
