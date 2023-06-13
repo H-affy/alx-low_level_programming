@@ -4,7 +4,7 @@
 #include "main.h"
 
 char *create_buffer(char *file);
-void close_file(int fx);
+void close_file(int fd);
 
 /**
  * create_buffer - allocates 1024 bytes to a buffer
@@ -28,17 +28,17 @@ char *create_buffer(char *file)
 
 /**
  * close_file - Function that closes file descriptors.
- * @fx: file decriptor to be closed.
+ * @fd: file decriptor to be closed.
  */
-void close_file(int fx)
+void close_file(int fd)
 {
 	int h;
 
-	h = close(fx);
+	h = close(fd);
 
 	if (h == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fx %d\n", fx);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
 		exit(100);
 	}
 }
